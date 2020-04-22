@@ -1,0 +1,35 @@
+# -----------------------------------------------------------------------------
+#
+# Copyright (C) Lukas Breitwieser.
+# All Rights Reserved.
+#
+# ----------------------------------------------------------------------------- 
+
+result_plot = "epidemiology"
+
+number_of_iterations = 3000 
+
+initial_population_susceptible = 2000
+initial_population_infected = 1 
+infection_radius = 10
+agent_diameter = 2.0
+agent_speed = 1.0
+recovery_duration = 300
+
+# ------------------------------------------------------------------------------
+[simulation]
+time_step = 1
+bound_space = true
+min_bound = 0 
+max_bound = 100
+run_mechanical_interactions = false 
+show_simulation_step = false
+
+# ------------------------------------------------------------------------------
+[visualization]
+export = false 
+export_interval = 1
+
+[[visualize_sim_object]]
+  name = "Agent"
+  additional_data_members = ["state_"]
